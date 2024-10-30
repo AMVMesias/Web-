@@ -4,3 +4,13 @@ body{
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
 }
+p{
+    color: brown;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+strong{
+    color: azure;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
