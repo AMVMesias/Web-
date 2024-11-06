@@ -1,5 +1,5 @@
 body{
-    background-color: cornflowerblue;
+    background-color: rgb(116, 165, 255);
     color: black;
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
@@ -16,4 +16,19 @@ strong{
 }
 h1{
     color: gray;
+}
+ul{
+    color: gold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+ol{
+    color:gold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+dt{
+    color:aliceblue ;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
 }
