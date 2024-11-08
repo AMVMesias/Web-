@@ -1,34 +1,84 @@
-body{
-    background-color: rgb(116, 165, 255);
-    color: black;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-}
-p{
-    color: brown;
+body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    background-color: #e0f7fa; /* Fondo azul claro */
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
-strong{
-    color: azure;
+
+p {
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+strong {
+    color: #e74c3c; 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 15px;
+    font-size: 1em;
 }
-h1{
-    color: gray;
+
+h1 {
+    color: #2c3e50; 
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 20px;
 }
-ul{
-    color: gold;
+
+h2 {
+    color: #16a085; 
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+ul, ol {
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    margin: 20px;
+}
+
+dt {
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+}
+
+footer {
+    color: #fff;
+    background-color: #ff5722; 
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
-ol{
-    color:gold;
+
+.destacado {
+    color: #d35400; 
     font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-size: 1.2em;
 }
-dt{
-    color:aliceblue ;
+
+a {
+    color: #2980b9; 
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#localización {
+    color: #8e44ad; 
     font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-size: 1.2em;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
