@@ -76,6 +76,7 @@ a:hover {
     width: 70%;
     margin: auto;
     overflow: hidden;
+    text-align: center;
 }
 .clasespan{
     color: #e74c3c;
