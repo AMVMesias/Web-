@@ -3,6 +3,7 @@
     width: 40%;
     border-collapse: collapse;
     margin: 0 auto;
+    margin-bottom: 500px;
 
 }
 
@@ -17,9 +18,20 @@ td {
     background-color: #f4f4f4;
     padding: 10px;
 }
-.asaid {
-    display: flex;
-    justify-content: space-between;
-    background-color: #4682b4;
-    color: white;
+.asai{
+    background-color: #d35400;
+    padding: 20px;
+    height: 500px;
+    width: 13%;
+    border-radius: 5px;
+    border: 2px solid black; 
+  
 }
+.textoooo{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    border: 2px solid black; 
+}
+
+
