@@ -1,0 +1,68 @@
+body{
+    background-image: url(../Image/image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+}
+
+.container{
+    display: flex;
+    flex-direction: column; 
+    background: brown;
+    padding: 20px;
+    width: 500px;
+    height: 700px; 
+    margin: 10px;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+.login-image {
+    margin: 0px 20px 20px 150px;
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%;
+    object-fit: cover; 
+}
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.formulario_input::placeholder {
+    color: black;
+    opacity: 1; 
+}
+.formulario_input {
+    padding: 10px 0; 
+    margin-bottom: 15px; 
+    border: none; 
+    border-bottom: 1px solid #ccc; 
+    background: none;
+    color: black; 
+}
+
+
+.formulario_submit {
+    padding: 10px;
+    background: rgb(193,7,231);
+    background: linear-gradient(90deg, rgba(193,7,231,1) 16%, rgba(255,0,0,1) 100%);    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+.remember-me p {
+    margin: 0 0 0 5px;
+}

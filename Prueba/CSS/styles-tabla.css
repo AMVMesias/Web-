@@ -1,0 +1,25 @@
+.tableStyle {
+    border: 3px double #d35400;
+    width: 40%;
+    border-collapse: collapse;
+    margin: 0 auto;
+
+}
+
+th {
+    border: 2px solid #d35400;
+    background-color: darkorange;
+    padding: 10px;
+}
+
+td {
+    border: 2px solid #d35400;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+.asaid {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4682b4;
+    color: white;
+}
