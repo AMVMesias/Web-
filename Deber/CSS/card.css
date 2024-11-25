@@ -1,0 +1,125 @@
+body {
+    background: rgb(2,255,235);
+    background: linear-gradient(90deg, rgba(2,255,235,1) 26%, rgba(50,0,133,1) 100%);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: #000 0px 0px 50px;
+    margin: auto;
+    height: 650px;
+    width: 400px;
+    margin-top: 50px;
+    background-color: #0188fc;
+    text-align: center;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 325px;
+    transition: transform 0.3s ease;
+}
+
+.card-head {
+    width: 100%;
+    height: 100%;
+    font-family: monospace;
+    background-color: bisque;
+}
+
+.card-head h1 {
+    transition: all 0.3s ease;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Creamos un área invisible que cubre toda la tarjeta */
+.card-head h1::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background: linear-gradient(90deg, rgba(50,0,133,1) 26%, rgba(2,255,235,1) 100%);
+    pointer-events: none;
+    
+}
+
+/* Cuando el cursor está sobre el título */
+.card-head h1:hover {
+    background-color: #000;
+    color: bisque;
+}
+
+/* Activamos el fondo cuando el cursor está sobre el título */
+.card-head h1:hover::before {
+    opacity: 1;
+}
+
+/* Usamos la clase del contenedor padre para voltear la imagen */
+.card:has(.card-head h1:hover) img {
+    transform: scaleX(-1);
+}
+
+.card-body {
+    text-align: justify;
+}
+
+.card-content {
+    margin: 8px;
+    font-family: monospace;
+}
+
+.product-name {
+    margin-right: 50px;
+}
+
+label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+label.rojo { background-color: red; }
+label.azul { background-color: blue; }
+label.blanco { background-color: white; }
+label.verde { background-color: green; }
+
+
+.card p {
+    font-size: 15px;
+    color: azure;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    box-shadow: 0 0 0 3px azure;
+}
+.card img:hover {
+    opacity: 0.7; 
+}
+.card img:hover + p {
+    opacity: 0.7; 
+}
+.card:has(.card-head h1:hover) label.rojo { 
+    background-color: blue; 
+}
+.card:has(.card-head h1:hover) label.azul { 
+    background-color: red; 
+}
+.card:has(.card-head h1:hover) label.blanco { 
+    background-color: black; 
+}
+.card:has(.card-head h1:hover) label.verde { 
+    background-color: yellow; 
+}
