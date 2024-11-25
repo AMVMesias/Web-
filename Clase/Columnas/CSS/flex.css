@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+}
+
+body{
+    height: 100%;
+    background-color: bisque;
+}
+
+.container{
+    display: flex;
+    border: 1px solid black;
+    height: 500px;
+    width: 40%;
+}
+div{
+    height: 50px;
+}
+
+.item-1{
+    flex: 2 2 100px;
+    /**
+    flex-wrap: 1; /*como crece un elemento segun su espacio disponible*/
+    /*flex-shrink: 1; /*controla como se encoge un elemento segun el espacio disponible*/
+    /*flex-basis: 100px; /*Define el tamaño inicial de un elemento*/
+    background-color: red;
+
+}
+.item-2{
+    flex: 2 2 200px;
+    background-color: green;
+}
+.item-3{
+    flex: 1 1 100px;
+    background-color: blue;
+}
