@@ -108,3 +108,23 @@ body{
         transform: translateX(0px);
     }
 }
+
+.ponk{
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background: #f00;
+    border-radius: 50%;
+    animation: moveCircle 5s linear infinite;
+}
+
+@keyframes moveCircle{
+    0%{
+    }
+    50%{
+        transform: translate(500px, 500px);
+    }
+    100%{
+        transform: translate(900px,0px);
+    }
+}
