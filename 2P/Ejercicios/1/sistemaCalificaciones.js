@@ -66,7 +66,7 @@ function imprimirResultados() {
         console.log("-----------------------------");
         console.log(estudiante.nombre);
         console.log("Clasificacion: " + clasificacion);
-        console.log("Promedio: " + promedio.toFixed(2));
+        console.log("Promedio: " + promedio);
         console.log("Calificacion mas alta: " + calificacionMasAlta);
         console.log("Calificacion mas baja: " + calificacionMasBaja);
         console.log("-----------------------------");
