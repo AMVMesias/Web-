@@ -1,4 +1,3 @@
-// Arreglo de estudiantes con información inicial
 let estudiantes = [
     { nombre: "Ana Martínez", calificaciones: [15, 17, 16] },
     { nombre: "Carlos Rodríguez", calificaciones: [14, 13, 15] },
