@@ -33,7 +33,7 @@ function clasificarEstudiante(promedio) {
 
 function encontrarMaximo(calificaciones) {
     let maximo = calificaciones[0];
-    for (let i = 1; i < calificaciones.length; i++) {
+    for (let i = 1; i < 10; i++) {
         if (calificaciones[i] > maximo) {
             maximo = calificaciones[i];
         }
@@ -43,7 +43,7 @@ function encontrarMaximo(calificaciones) {
 
 function encontrarMinimo(calificaciones) {
     let minimo = calificaciones[0];
-    for (let i = 1; i < calificaciones.length; i++) {
+    for (let i = 1; i < 10; i++) {
         if (calificaciones[i] < minimo) {
             minimo = calificaciones[i];
         }
