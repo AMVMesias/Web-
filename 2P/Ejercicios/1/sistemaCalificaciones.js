@@ -11,7 +11,6 @@ let estudiantes = [
     { nombre: "David Morales", calificaciones: [13, 14, 15] }
 ];
 
-estudiantes[0].calificaciones = [15, 17, 20];
 
 
 function calcularPromedio(calificaciones) {
