@@ -33,17 +33,36 @@ function clasificarEstudiante(promedio) {
     return "Reprobado";
 }
 
+function encontrarMaximo(calificaciones) {
+    let maximo = calificaciones[0];
+    for (let i = 1; i < calificaciones.length; i++) {
+        if (calificaciones[i] > maximo) {
+            maximo = calificaciones[i];
+        }
+    }
+    return maximo;
+}
+
+function encontrarMinimo(calificaciones) {
+    let minimo = calificaciones[0];
+    for (let i = 1; i < calificaciones.length; i++) {
+        if (calificaciones[i] < minimo) {
+            minimo = calificaciones[i];
+        }
+    }
+    return minimo;
+}
 function imprimirResultados() {
     let resultados = estudiantes.map(estudiante => ({
         nombre: estudiante.nombre,
         promedio: calcularPromedio(estudiante.calificaciones)
     }));
-    
+
     for (let estudiante of estudiantes) {
         let promedio = calcularPromedio(estudiante.calificaciones);
         let clasificacion = clasificarEstudiante(promedio);
-        let calificacionMasAlta = Math.max(...estudiante.calificaciones);
-        let calificacionMasBaja = Math.min(...estudiante.calificaciones);
+        let calificacionMasAlta = encontrarMaximo(estudiante.calificaciones);
+        let calificacionMasBaja = encontrarMinimo(estudiante.calificaciones);
 
         console.log("-----------------------------");
         console.log(estudiante.nombre);
