@@ -217,3 +217,162 @@ let personaString = JSON.stringify(persona);
 console.log(personaString);
 
 console.log(JSON.parse(personaString));
+
+//ver Objetvo Grpupby
+
+//Metodos get y set
+
+
+//Mejores practicas para acceder y modificar propiedades de un objeto
+
+
+let personaget = {
+    nombre: "Mesias",
+    apellido: "Mariscal",
+    edad: 21,
+    get nombreCompleto() {
+        return this.nombre + " " + this.apellido;
+    }
+} 
+console.log(personaget.nombreCompleto);
+
+
+
+//Metodo set en objetos de JS
+//Establecer un valor a los atributos de un objeto
+
+//validacion 
+
+let personaset = {
+    nombre: "Mesias",
+    apellido: "Mariscal",
+    email: "mesi@gmail.com",
+    edad: 21,
+    idioma: "ES",
+    get lang() {
+        return this.idioma.toUpperCase();
+    },
+
+    get nombreCompleto() {
+        return this.nombre + " " + this.apellido;
+    }
+}
+
+console.log(personaset.lang)
+
+
+let personaset2 = {
+    nombre: "Mesias",
+    apellido: "Mariscal",
+    email: "mesi@gmail.com",
+    edad: 21,
+    idioma: "ES",
+    get lang() {
+        return this.idioma.toUpperCase();
+    },
+
+    get nombreCompleto() {
+        return this.nombre + " " + this.apellido;
+    },
+    
+    set lang(lang){
+        this.idioma = lang.toUpperCase();
+    }	
+}
+
+
+console.log(personaset2.lang);  
+personaset2.lang = "en";
+console.log(personaset2.lang);
+
+
+//Si deseo crear mas objetos del mismo tipo no es posible
+
+//Para eso se usa una funcion constructora
+
+//Funcion constructora
+
+function PersonaFC(nombre, apellido, email){
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.email = email;
+ 
+}
+
+let padre = new PersonaFC("Juan", "Perez", "mesias@gmail.com"); 
+console.log(padre);
+
+padre.telefono = "0987654321";
+
+console.log(padre);
+padre.nombre = "Carlos";
+console.log(padre);
+let madre = new PersonaFC("Maria", "Rea", "rea@gmail.com");
+console.log(madre);
+
+
+function PersonaFCM(nombre, apellido, email){
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.email = email;
+    this.nombreCompleto = function(){
+        return this.nombre + " " + this.apellido;
+    }
+}
+
+let padre2 = new PersonaFCM("Juan", "Perez", "eldiablo@gmail.com");
+console.log(padre2.nombreCompleto());
+
+let madre2 = new PersonaFCM("Maria", "Rea", "diaz@gmail.com");
+console.log(madre2.nombreCompleto());
+
+
+//uso de prototype
+
+PersonaFCM.prototype.tel = "0987654321";
+
+console.log(padre2.tel);
+
+
+let personaC1 = {
+    nombre: "Mesias",
+    apellido: "Mariscal",
+    nombreCompleto: function(){
+        return this.nombre + " " + this.apellido;
+    }
+}
+
+let personaC2 = {
+    nombre: "Mesias",
+    apellido: "Mariscal",
+
+}
+
+
+//Para usar el metodo nombreCompleto de personaC1 en personaC2
+console.log(personaC1.nombreCompleto());
+
+console.log(personaC1.nombreCompleto.call(personaC2));
+//console.log(personaC1.nombreCompleto.apply(personaC2));
+
+
+//pasar argumentos a parametros con call
+
+let personaCP1 = {
+    nombre: "Mesias",
+    apellido: "Mariscal",
+    nombreCompleto: function(titulo, tel){
+        return titulo + ": " + this.nombre + " " + this.apellido + ", " + tel;
+    }
+}
+
+
+let personaCP2 = {
+    nombre: "Andres",
+    apellido: "farsa",
+
+}
+
+
+console.log(personaCP1.nombreCompleto("Lic", "0987654321"));
+console.log(personaCP1.nombreCompleto.call(personaCP2, "Ing", "0987654321"));

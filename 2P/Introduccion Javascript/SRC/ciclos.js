@@ -26,7 +26,7 @@ console.log('****For of****');
 for (let heroe of heroes) { 
     console.log(heroe);
 }
-
+//for of sirve 
 
 //Usa for tradicional o clasico, cuando se necesita el control
 

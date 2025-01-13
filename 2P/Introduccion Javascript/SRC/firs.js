@@ -211,7 +211,7 @@ console.log("Decremento: " + l);
     am-=2;
     console.log(am);
 
-    a10-=2;
+    a10-=2;pop
     console.log(a10);
 
     //Operadores logicos
