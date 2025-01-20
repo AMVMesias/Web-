@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">
+        Manejo del DOM
+    </h1>
+    <p>Saludos write!</p>
+    <button type="button" onclick="mostrar()">Mostrar</button>
+    <img id="image" src="../Image/image.png" alt="image">
+</body>
+<script>
+    document.write("Hola desde Javascript");
+/*
+    function mostrar(){
+        document.write("adios");
+    }
+
+  */
+/* 
+    function mostrar(){
+        document.getElementById('titulo').innerHTML="Hola desde Javascript";
+    }
+*/
+/*function mostrar(){
+    document.getElementById('image').src = "../Image/image2.png";
+}
+*/
+
+/*function mostrar(){
+    document.getElementById('titulo').style.color = "red";
+}
+*/
+
+ //crear una funcion que permita el cambio de una imagen cada dos o 3 segndos con 4 o 5 imagenes
+    let i=0;
+    let images = ['../Image/image.png','../Image/image2.png','../Image/image3.png','../Image/image4.png','../Image/image5.png'];
+
+    function mostrar(){
+        document.getElementById('image').src = images[i];
+        i++;
+        if(i>=images.length){
+            i=0;
+        }
+        setTimeout('mostrar()',2000);
+    }
+</script>
+</html>

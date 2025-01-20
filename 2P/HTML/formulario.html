@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM con Formularios</title>
+</head>
+<body>
+    <form action="" id="formulario">
+        Nombre: <input type="text" name="nombre" value="Denise"><br>
+        <br>
+        Apellido: <input type="text" name="apellido" value="Rea"><br>
+        Correo: <input type="email" name="correo" value="deniserea@espe.edu.ec">
+    </form>
+    <button type="submit" onclick="mostrarValores()"> Mostrar </button>
+
+    <div id="valores">
+        <!-- Aquí se mostrarán los valores -->
+    </div>
+    <script>
+        function mostrarValores(){
+            let formulario = document.forms['formulario'];
+//            console.log(formulario);
+            let texto=[];
+            for(const element of formulario){
+                texto+=element.value+'<br>';
+            }
+            //console.log(texto);
+            //document.getElementById('valores').innerHTML=texto;
+            
+        let nombre=formulario['nombre'];
+        let apellido=formulario['apellido'];
+        let email_=formulario['email'];  
+        
+        texto=nombre.value+'<br>'+apellido.value+'<br>'+email_.value+'<br>';
+        document.getElementById('valores').innerHTML=texto;
+        }
+
+
+    </script>
+</body>
+</html>
