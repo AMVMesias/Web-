@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Configuración</title>
+</head>
+<body>
+    <h1 id="tituloPagina">Título de la Página</h1>
+    
+    <button id="botonAlternar">Mostrar/Ocultar Panel</button>
+    
+    <div id="panelConfig" hidden>
+        <div>
+            Título: <input type="text" id="inputTitulo" value="Título de la Página">
+        </div>
+        <div>
+            Color de fondo: <input type="color" id="colorFondo" value="#ffffff">
+        </div>
+        <div>
+            Habilitar comentarios: <input type="checkbox" id="habilitarComentarios" checked>
+        </div>
+    </div>
+
+    <div>
+        <textarea id="areaComentarios" rows="4" cols="50">Área de comentarios</textarea>
+    </div>
+
+    <ul id="listaElementos">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+
+    <script>
+        function inicializarEventos() {
+            document.getElementById('botonAlternar').addEventListener('click', alternarPanel);
+            document.getElementById('inputTitulo').addEventListener('input', actualizarTitulo);
+            document.getElementById('colorFondo').addEventListener('input', cambiarColorFondo);
+            document.getElementById('habilitarComentarios').addEventListener('change', alternarComentarios);
+            document.getElementById('listaElementos').addEventListener('click', eliminarElemento);
+        }
+
+        function alternarPanel() {
+            let panel = document.getElementById('panelConfig');
+            if (panel.style.display === "none") {
+                panel.style.display = "block";
+            } else {
+                panel.style.display = "none";
+            }
+        }
+
+        function actualizarTitulo(evento) {
+            document.getElementById('tituloPagina').textContent = evento.target.value;
+        }
+
+        function cambiarColorFondo(evento) {
+            document.body.style.backgroundColor = evento.target.value;
+        }
+
+        function alternarComentarios(evento) {
+            document.getElementById('areaComentarios').disabled = !evento.target.checked;
+        }
+
+        function eliminarElemento(evento) {
+             evento.target.style.display = 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', inicializarEventos);
+    </script>
+</body>
+</html>

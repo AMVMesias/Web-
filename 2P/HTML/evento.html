@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="entrar()"> 
+    <!-- se ejecuta al terminar de cargar la pagina -->
+   <!-- <h1 id="titulo" onclick="this.innerHTML='Nuevo tipo'">Evento onclick</h1>-->
+    <!--<h1 id="titulo" onclick="cambiarTexto(this)">Evento onclick</h1> -->
+    <h1 id="titulo">Evento onclick</h1>
+    
+    <br>
+    <div id="mostrar"> </div>
+
+    <br>
+    nombre: <input type="text" onchange="convertir(this)">
+    <br>
+    <h1 id="titulo2" onmouseover="rojo(this)" onmouseup = "azul(this)" onclick = "verde(this)"> AAAAAA</h1>
+
+    <br>
+    Onfocus y Onblur
+    <br>
+    Nombre: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)">
+    <br>
+    <h1>Evento addLister</h1>
+    Nombre: <input type="text" name="" id="nombre"> <br>
+    Apellido: <input type="text" name="" id="apellidos">
+
+    <form action="" id="formulario">
+        Onfocus y Onblur
+        <br>
+        Nombre: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)">
+        <br>
+        <h1>Evento addLister</h1>
+        Nombre: <input type="text" name="" id="nombre1"> <br>
+        Apellido: <input type="text" name="" id="apellidos1">
+
+    </form>
+    <script>      //  function cambiarTexto(titulo){
+           // console.log(titulo);
+           //titulo.innerHTML="Nuevo tipo";
+       // }
+        document.getElementById('nombre').addEventListener('click',(evento) => {
+            evento.target.style.background = 'red';});
+        document.getElementById('nombre').addEventListener('blur',(evento) => {
+            evento.target.style.background = 'green';});
+
+        document.getElementById('apellidos').addEventListener('click',(evento) => {
+            evento.target.style.background = 'blue';});
+
+        document.getElementById('apellidos').addEventListener('blur',(evento) => {
+            evento.target.style.background = 'yellow';});
+               //document.getElementById('titulo').onclick=cambiarTexto;
+        //Es como usar callback
+        //de forma dinamica
+
+        //function cambiarTexto(){
+            //document.getElementById('titulo').innerHTML= 'otro titulo'
+
+        //}
+
+        function entrar(){
+            alert("Entrando a la pagina")
+        }
+
+        //Manejo de cookies
+        //archivos que guardan informacion, cuando navegamos por la web
+        //validar)llave ,valor)
+
+        let texto = '';
+        if(navigator.cookieEnabled){
+            texto = 'Cookies habilitadas';
+        }else{
+            texto = 'Cookies deshabilitadas';
+        }
+        document.getElementById('mostrar').innerHTML = texto;
+        function convertir(input){
+            input.value = input.value.toUpperCase();
+        }
+        function rojo(){
+            titulo2.style.color = 'red';
+            }
+
+        function azul(){
+            titulo2.style.color = 'blue';
+        }
+        function verde(){
+            titulo2.style.color = 'green';
+        }
+
+        function cambiar(elementInput){
+            elementInput.style.background = 'yellow';
+        }
+        function regresar(elementInput){
+            elementInput.style.background = 'green';
+        }
+
+
+        let formulario = document.getElementById('formulario');
+
+        -formulario.addEventListener('click',(evento) => {
+            evento.target.style.background = 'red';});
+        formulario.addEventListener('blur',(evento) => {
+            evento.target.style.background = '';});
+        formulario.addEventListener('blur',(evento) => {
+            evento.target.style.background = 'blue';});
+        formulario.addEventListener('blur',(evento) => {
+            evento.target.style.background = '';});
+    </script>
+</body>
+</html>
